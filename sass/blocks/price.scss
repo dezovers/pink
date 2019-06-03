@@ -1,0 +1,458 @@
+.price {
+  padding-top: 89px;
+  padding-right: 20px;
+  padding-bottom: 47px;
+  padding-left: 20px;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 25px;
+  }
+}
+
+.price__table {
+  width: 300%;
+  margin-bottom: 41px;
+  border-collapse: collapse;
+  transform: translateX(-33.333%);
+
+  &--translate-0 {
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &--translate-33 {
+    transform: translateX(-33.333%);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &--translate-66 {
+    transform: translateX(-66.666%);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+}
+
+.price__head-cell {
+  width: 33.333%;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-right: 5%;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  vertical-align: top;
+  border: 2px solid #e5e5e5;
+  border-bottom: 0;
+  background-clip: padding-box;
+  background-color: #283645;
+  position: relative;
+
+  &--hit::before {
+    content: "ХИТ";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    font-size: 14px;
+    line-height: 2.142;
+    font-weight: 400;
+    color: #ffffff;
+    transform: rotate(-45deg);
+    z-index: 1;
+  }
+
+  &--hit::after {
+    content: "";
+    position: absolute;
+    width: 74px;
+    height: 73px;
+    top: 0;
+    left: -1px;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-size: 74px 73px;
+    z-index: 0;
+  }
+}
+
+.price__item-title {
+  width: 194px;
+  margin: 0 auto;
+  margin-bottom: 2px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.666;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.price__item-cost {
+  width: 194px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.price__option-name {
+  &--switchable {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+}
+
+.price__option-title {
+  margin: 0;
+  padding: 0;
+}
+
+.price__option-value {
+  width: 33.333%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--no-bordertop {
+    border-top: 0;
+  }
+}
+
+.price__option-placeholder {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-right: 65px;
+  padding-bottom: 14px;
+  padding-left: 21px;
+  position: relative;
+  font-size: 14px;
+  line-height: 2.142;
+  font-weight: 400;
+  color: #283645;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--filter::before {
+    content: "Розовый фильтр";
+  }
+
+  &--smiles::before {
+    content: "Смайлики";
+  }
+
+  &--comments::before {
+    content: "Комментарии";
+  }
+
+  &--yes::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 21px;
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--no::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.price__controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.price__toggler {
+  flex-basis: auto;
+  display: inline-block;
+  vertical-align: top;
+  width: 6px;
+  height: 6px;
+  margin: 0 7px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: #b5b9be;
+  background-clip: content-box;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+    outline: none;
+  }
+
+  &--active {
+    margin: 0 7px;
+    padding: 0;
+    border: 3px solid #283645;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-clip: border-box;
+  }
+
+  &--active:hover,
+  &--active:focus,
+  &--active:active {
+    background-color: #ffffff;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .price {
+    padding-bottom: 69px;
+
+    &::before {
+      height: 55px;
+      background-size: cover;
+    }
+  }
+
+  .price__table {
+    width: 100%;
+    margin-bottom: 0;
+    transform: translateX(0);
+  }
+
+  .price__head-cell {
+    width: 25%;
+    padding-top: 12px;
+    padding-bottom: 10px;
+
+    &--hit::before {
+      top: 3px;
+      left: 6px;
+    }
+
+    &--hit::after {
+      width: 61px;
+      height: 61px;
+      top: 0;
+      left: 0;
+      background-image: url("../img/bg-hit-tablet.svg");
+      background-size: 61px 61px;
+    }
+  }
+
+  .price__item-title {
+    width: 91px;
+    margin-bottom: -2px;
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+  .price__item-cost {
+    width: 91px;
+    font-size: 18px;
+    line-height: 1.666;
+  }
+
+  .price__option-name {
+    &--switchable {
+      position: static;
+      width: 25%;
+      height: auto;
+      box-sizing: border-box;
+      vertical-align: middle;
+      margin: 0;
+      padding-top: 6px;
+      padding-right: 2.5%;
+      padding-bottom: 7px;
+      padding-left: 2.5%;
+      white-space: normal;
+      clip-path: none;
+      clip: auto;
+      overflow: visible;
+      border: 2px solid #e5e5e5;
+      background-color: #ffffff;
+      font-size: 14px;
+      line-height: 2.142;
+      font-weight: 400;
+      color: #283645;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+
+  .price__option-title {
+    width: 120px;
+    margin-right: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .price__option-value {
+    width: 25%;
+  }
+
+  .price__option-placeholder {
+    height: 43px;
+    padding: 0;
+
+    &--filter::before {
+      content: none;
+    }
+
+    &--smiles::before {
+      content: none;
+    }
+
+    &--comments::before {
+      content: none;
+    }
+
+    &--yes::after {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--no::after {
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .price__controls {
+    display: none;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .price {
+    padding: 0;
+    padding-top: 148px;
+    padding-bottom: 94px;
+
+    &::before {
+      height: 83px;
+      background-size: 100% 100%;
+    }
+  }
+
+  .price__table {
+    width: 940px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .price__head-cell {
+    padding-top: 17px;
+    padding-right: 51px;
+    padding-bottom: 20px;
+    padding-left: 49px;
+
+    &--hit::before {
+      top: 11px;
+      left: 10px;
+    }
+
+    &--hit::after {
+      width: 74px;
+      height: 73px;
+      top: 0;
+      left: 0;
+      background-image: url("../img/bg-hit.svg");
+      background-size: 74px 73px;
+    }
+  }
+
+  .price__item-title {
+    width: 132px;
+    margin-bottom: 1px;
+    font-size: 18px;
+    line-height: 1.666;
+  }
+
+  .price__item-cost {
+    width: 132px;
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .price__option-name {
+    &--switchable {
+      padding-top: 7px;
+      padding-right: 21px;
+      padding-left: 21px;
+      font-size: 18px;
+      line-height: 1.666;
+    }
+  }
+
+  .price__option-title {
+    width: 189px;
+  }
+
+  .price__option-placeholder {
+    height: 58px;
+
+    &--yes::after {
+      transform: translate(-50%, -40%);
+    }
+
+    &--no::after {
+      transform: translate(-55%, -50%);
+    }
+  }
+}

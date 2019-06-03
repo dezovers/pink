@@ -1,0 +1,25 @@
+.gallery__grid {
+  width: 280px;
+  margin: 0 auto;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .gallery__grid {
+    width: 620px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .gallery__grid {
+    width: 940px;
+  }
+}

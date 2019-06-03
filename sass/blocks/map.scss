@@ -1,0 +1,70 @@
+.map {
+  height: 200px;
+  position: relative;
+  background-color: #ede8e2;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 320px auto;
+
+  @media #{$retina-2x} {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    z-index: 100;
+  }
+}
+
+.map__container {
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .map {
+    height: 372px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-size: 700px auto;
+
+    @media #{$retina-2x} {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+
+    &::before {
+      height: 67px;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .map {
+    height: 502px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-size: 1200px auto;
+    background-position: 50% -278px;
+
+    @media #{$retina-2x} {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+
+    &::before {
+      height: 103px;
+      background-size: 100% 100%;
+    }
+  }
+}

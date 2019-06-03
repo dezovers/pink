@@ -1,0 +1,252 @@
+.post {
+  width: 280px;
+  margin-bottom: 21px;
+
+  &:nth-of-type(odd) {
+    margin-bottom: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.post__img-container {
+  width: 100%;
+  height: 180px;
+  background-color: #e6e6e6;
+}
+
+.post__img-link {
+  display: block;
+  width: 100%;
+  height: 180px;
+  text-decoration: none;
+}
+
+.post__img-set {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__img {
+  display: block;
+}
+
+.post__info-container {
+  width: 280px;
+  box-sizing: border-box;
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 22px;
+  padding-left: 17px;
+  background-color: #f2f2f2;
+}
+
+.post__mention {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.post__blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.post__author {
+  flex-basis: auto;
+  max-width: 100%;
+  margin-right: 4px;
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 700;
+  color: #283645;
+  font-style: normal;
+}
+
+.post__post-datetime {
+  flex-basis: auto;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #283645;
+}
+
+.post__quote {
+  margin: 0;
+  margin-bottom: 9px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 400;
+  color: #283645;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.post__rating {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.post__like-button {
+  flex-basis: auto;
+  width: 13px;
+  height: 13px;
+  margin-top: 6px;
+  margin-right: 18px;
+  margin-left: 1px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  order: 1;
+}
+
+.post__like-count {
+  flex-basis: auto;
+  max-width: 85%;
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d22856;
+  order: 2;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .post {
+    width: 300px;
+    margin: 0;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &:nth-of-type(odd),
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+
+  .post__img-container {
+    flex-basis: auto;
+    height: 300px;
+    flex-grow: 0;
+  }
+
+  .post__img-link {
+    height: 300px;
+  }
+
+  .post__info-container {
+    flex-basis: auto;
+    width: 300px;
+    min-height: 155px;
+    padding-top: 24px;
+    padding-right: 27px;
+    padding-bottom: 22px;
+    padding-left: 27px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .post__mention {
+    margin-bottom: 1px;
+  }
+
+  .post__quote {
+    margin-bottom: 13px;
+  }
+
+  .post__rating {
+    margin-top: auto;
+    justify-content: space-between;
+  }
+
+  .post__like-button {
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    order: 0;
+  }
+
+  .post__like-count {
+    order: 0;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .post {
+    margin-bottom: 54px;
+
+    &:nth-of-type(odd),
+    &:last-of-type {
+      margin-bottom: 54px;
+    }
+  }
+
+  .post__img-container {
+    height: 400px;
+  }
+
+  .post__img-link {
+    height: 400px;
+  }
+
+  .post__mention {
+    margin: 0;
+  }
+
+  .post__author {
+    margin-right: 5px;
+  }
+
+  .post__quote {
+    margin-bottom: 14px;
+  }
+
+  .post__rating {
+    margin-bottom: 1px;
+  }
+
+  .post__like-button {
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    order: 0;
+  }
+
+  .post__like-count {
+    order: 0;
+  }
+}

@@ -1,0 +1,146 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 41px;
+  background-color: #ffffff;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  z-index: 666;
+
+  &--active {
+    display: block;
+    animation-name: fadein;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 19px;
+  font-size: 18px;
+  line-height: 1.333;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.modal__description {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 19px;
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 400;
+  color: #283645;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--success {
+    margin-bottom: 33px;
+  }
+}
+
+.modal__button-container {
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  text-align: center;
+
+  &--bg-gray {
+    padding-top: 48px;
+    padding-bottom: 52px;
+    background-color: #f2f2f2;
+  }
+}
+
+.modal__button {
+  display: block;
+  width: 100%;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .modal {
+    width: 460px;
+    padding-top: 36px;
+  }
+
+  .modal__title {
+    margin-bottom: 25px;
+    padding-right: 80px;
+    padding-left: 78px;
+    font-size: 30px;
+    line-height: 1.333;
+  }
+
+  .modal__description {
+    margin-bottom: 39px;
+    padding-right: 78px;
+    padding-left: 76px;
+    font-size: 18px;
+    line-height: 1.333;
+
+    &--success {
+      margin-bottom: 35px;
+      padding-right: 78px;
+      padding-left: 76px;
+    }
+  }
+
+  .modal__button-container {
+    padding-right: 80px;
+    padding-bottom: 53px;
+    padding-left: 80px;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .modal {
+    width: 460px;
+    padding-top: 36px;
+
+    &--success {
+      width: 780px;
+      padding-top: 41px;
+    }
+  }
+
+  .modal__title {
+    margin-bottom: 25px;
+    padding-right: 80px;
+    padding-left: 78px;
+  }
+
+  .modal__description {
+    &--success {
+      margin-bottom: 40px;
+      padding-right: 163px;
+      padding-left: 160px;
+    }
+  }
+
+  .modal__button-container {
+    padding-right: 80px;
+    padding-left: 80px;
+
+    &--success {
+      padding-right: 160px;
+      padding-left: 160px;
+    }
+  }
+}

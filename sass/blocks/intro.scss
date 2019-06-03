@@ -1,0 +1,171 @@
+.intro {
+  min-height: 108px;
+  padding-top: 31px;
+  padding-right: 20px;
+  padding-bottom: 32px;
+  padding-left: 20px;
+  background-color: transparent;
+
+  &--index-decor {
+    padding-top: 395px;
+    padding-bottom: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &--index-decor::after {
+    content: "";
+    position: absolute;
+    width: 258px;
+    height: 286px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-62.2%);
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 258px auto;
+    z-index: 0;
+
+    @media #{$retina-2x} {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+    }
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.intro__title {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.233;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--index-decor {
+    display: none;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .intro {
+    min-height: 187px;
+    padding-top: 68px;
+    padding-bottom: 75px;
+
+    &--index-decor {
+      padding-top: 93px;
+      padding-bottom: 110px;
+    }
+
+    &--index-decor::after {
+      width: 700px;
+      height: 545px;
+      top: auto;
+      right: 50%;
+      bottom: 0;
+      left: auto;
+      transform: translateX(50%);
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+      background-size: 700px auto;
+
+      @media #{$retina-2x} {
+        background-image: url("../img/iphone-hand-tablet@2x.png");
+      }
+    }
+  }
+
+  .intro__wrapper {
+    width: 48.4%;
+    margin-right: auto;
+  }
+
+  .intro__title {
+    font-size: 50px;
+
+    &--index-decor {
+      display: block;
+      width: 245px;
+      margin-right: 28px;
+      margin-left: auto;
+      margin-bottom: 28px;
+      font-size: 40px;
+    }
+  }
+
+  .intro__download {
+    width: 300px;
+    margin-left: auto;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .intro {
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 61px;
+    padding-right: 10px;
+    padding-bottom: 35px;
+    padding-left: 10px;
+
+    &--index-decor {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      padding-top: 106px;
+    }
+
+    &--index-decor::after {
+      content: none;
+    }
+  }
+
+  .intro__wrapper {
+    width: 940px;
+    min-height: 637px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1050px;
+      height: 645px;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 26px;
+      transform: translateX(0);
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+      background-size: 1050px auto;
+      z-index: -1;
+
+      @media #{$retina-2x} {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
+      }
+    }
+  }
+
+  .intro__title {
+    &--index-decor {
+      margin-right: auto;
+      margin-left: 27px;
+      margin-bottom: 48px;
+      font-size: 50px;
+    }
+  }
+
+  .intro__download {
+    margin: 0;
+    margin-right: auto;
+  }
+}

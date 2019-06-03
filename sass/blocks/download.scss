@@ -1,0 +1,132 @@
+.download {
+  padding-top: 29px;
+  padding-bottom: 31px;
+}
+
+.download__button {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+
+.download__list {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.download__list-item {
+  flex-basis: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 18px;
+  margin-left: 17px;
+  font-size: 14px;
+
+  &--google {
+    margin-top: 9px;
+  }
+
+  &--windows {
+    margin-top: 9px;
+  }
+}
+
+.download__item-link {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &--apple {
+    width: 47px;
+    height: 57px;
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--google {
+    width: 43px;
+    height: 48px;
+    background-image: url("../img/logo-google.svg");
+  }
+
+  &--windows {
+    width: 44px;
+    height: 42px;
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}
+
+.download__info {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.714;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .download {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .download__button {
+    width: auto;
+    margin-bottom: 45px;
+  }
+
+  .download__list {
+    margin-bottom: 37px;
+  }
+
+  .download__list-item {
+    &--google {
+      margin-top: 4px;
+    }
+  }
+
+  .download__info {
+    font-size: 18px;
+    line-height: 1.333;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .download {
+    padding-bottom: 50px;
+  }
+
+  .download__button {
+    margin-bottom: 66px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    font-size: 21px;
+  }
+
+  .download__list {
+    margin-bottom: 56px;
+  }
+
+  .download__list-item {
+    &--google {
+      margin-top: 8px;
+      margin-right: 19px;
+      margin-left: 16px;
+    }
+  }
+}

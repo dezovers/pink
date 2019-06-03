@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="origin">
+    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <meta name="format-detection" content="telephone=no">
+  </head>
+
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-menu-burger" viewBox="0 0 49.945 24.007">
+        <path d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z"/>
+        <path d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z"/>
+      </symbol>
+      <symbol id="icon-menu-cross" viewBox="0 0 23.867 23.867">
+        <path d="M15.087 11.933l8.56-8.559a.75.75 0 0 0 0-1.061L21.554.22a.747.747 0 0 0-1.06 0l-8.561 8.56L3.373.22a.771.771 0 0 0-1.061 0L.22 2.313a.75.75 0 0 0 0 1.061l8.56 8.559-8.56 8.559a.751.751 0 0 0 0 1.062l2.093 2.094a.744.744 0 0 0 1.06 0l8.561-8.56 8.56 8.56a.746.746 0 0 0 1.06 0l2.093-2.094a.751.751 0 0 0 0-1.062l-8.56-8.559z"/>
+      </symbol>
+      <symbol id="logo-htmlacademy" viewBox="0 0 26.943 34.09">
+        <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/>
+      </symbol>
+      <symbol id="logo-pink-lg-bottom" viewBox="0 0 146.3 40.4">
+        <g id="logo-pink-lg-bottom-1">
+          <path d="M71.9 18.7c0-.7.6-1.3 1.3-1.3h7.2c5.1 0 8.4 2.7 8.4 7.1v.1c0 4.9-4.1 7.4-8.9 7.4h-5.5v6.8c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3l.1-20.1zM80 29.6c3.7 0 6.2-2 6.2-5v-.1c0-3.2-2.4-4.9-6.1-4.9h-5.7v9.9l5.6.1z"/>
+          <path d="M93.6 18.5c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v20.3c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V18.5z"/>
+          <path d="M102.7 18.5c0-.7.6-1.3 1.3-1.3h.4c.6 0 .9.3 1.3.7l13.7 17.5v-17c0-.7.5-1.3 1.3-1.3.7 0 1.2.6 1.2 1.3v20.3c0 .7-.5 1.2-1.2 1.2h-.1c-.5 0-.9-.3-1.3-.8l-14-17.9v17.4c0 .7-.5 1.3-1.3 1.3-.7 0-1.2-.6-1.2-1.3l-.1-20.1z"/>
+          <path d="M128.2 18.5c0-.7.6-1.3 1.3-1.3s1.3.6 1.3 1.3v12.3l12.8-13.2c.3-.3.6-.5 1-.5.7 0 1.2.6 1.2 1.3 0 .4-.2.6-.4.9l-8 7.9 8.6 10.6c.2.3.4.5.4.9 0 .7-.6 1.3-1.3 1.3-.5 0-.8-.3-1-.6L135.6 29l-4.9 4.9v4.9c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3l.1-20.3z"/>
+          <path d="M50.7 16.1c-2.5 0-4.5-2-4.5-4.5 0 2.5-2 4.5-4.5 4.5 2.5 0 4.5 2 4.5 4.5 0-2.5 2-4.5 4.5-4.5z"/>
+          <path d="M37.9 19.6c-1.5 0-2.7-1.2-2.7-2.7 0 1.5-1.2 2.7-2.7 2.7 1.5 0 2.7 1.2 2.7 2.7 0-1.4 1.2-2.7 2.7-2.7z"/>
+          <path d="M10.7 34.1c-1.5 0-2.7-1.2-2.7-2.8 0 1.5-1.2 2.8-2.7 2.8 1.5 0 2.7 1.2 2.7 2.7 0-1.5 1.2-2.7 2.7-2.7z"/>
+        </g>
+        <g id="logo-pink-lg-bottom-2">
+          <path d="M43.1 19.3h.7c-.4-.7-1.2-1.2-2.1-1.2-.9 0-1.6-.6-1.9-1.4-.7.2-1.4.5-2.1.8h.2c1.1 0 2 .9 2 2v.3c1-.3 2.1-.5 3.2-.5z"/>
+          <path d="M60.5 28L55.3 6.6C54.9 4.3 52.7 0 46.7 0c-.8 0-1.5.7-1.5 1.5S45.9 3 46.7 3c4.9 0 5.6 3.7 5.6 4.1l4.8 19.7H55c-.4-3.6-2.5-6.6-5.3-8.5-.9.4-1.5 1.3-1.5 2.3v.3c2 1.4 3.4 3.5 3.8 6 .1.5.1 1 .1 1.5s-.1 1-.1 1.5c-.7 4.3-4.4 7.5-8.9 7.5s-8.2-3.3-8.9-7.5c-.1-.5-.1-1-.1-1.5s.1-1 .1-1.5c.1-.9.4-1.7.8-2.5-1-.1-1.9-.9-1.9-2 0-.2-.1-.4-.2-.5-.9 1.5-1.6 3.1-1.8 5h-1.8c-.7-5.9-5.8-10.5-11.9-10.5S6.2 20.9 5.5 26.8H3.4L8.2 7.1C8.3 6.7 9 3 13.8 3c.8 0 1.5-.7 1.5-1.5S14.7 0 13.8 0c-6 0-8.2 4.3-8.6 6.7L0 28.1c-.3 1.1.5 1.8 1.4 1.8h4c.1.6.2 1.2.4 1.8.1-.1.2-.2.2-.4 0-1.1.9-2 2-2 .2 0 .3 0 .5.1 0-.3-.1-.7-.1-1 0-.5.1-1 .1-1.5.7-4.3 4.4-7.5 8.9-7.5s8.2 3.3 8.9 7.5c.1.5.1 1 .1 1.5s-.1 1-.1 1.5c-.7 4.3-4.4 7.5-8.9 7.5-2 0-3.9-.7-5.4-1.8-.4.3-.8.5-1.3.5-.4 0-.7.3-.7.7 0 .3-.1.6-.2.8 2.1 1.7 4.7 2.7 7.6 2.7 6.1 0 11.2-4.6 11.9-10.5h1.8c.7 5.9 5.8 10.5 11.9 10.5s11.3-4.5 12-10.5h4c.9 0 1.7-.7 1.5-1.8z"/>
+          <path d="M98.5 9.9c-2 0-3.6-1.6-3.6-3.6 0 2-1.6 3.6-3.6 3.6 2 0 3.6 1.6 3.6 3.6 0-2 1.6-3.6 3.6-3.6z"/>
+        </g>
+      </symbol>
+      <symbol id="logo-pink-lg-top" viewBox="0 0 146.3 40.4">
+        <g id="logo-pink-lg-top-1">
+          <path d="M71.9 18.7c0-.7.6-1.3 1.3-1.3h7.2c5.1 0 8.4 2.7 8.4 7.1v.1c0 4.9-4.1 7.4-8.9 7.4h-5.5v6.8c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3l.1-20.1zM80 29.6c3.7 0 6.2-2 6.2-5v-.1c0-3.2-2.4-4.9-6.1-4.9h-5.7v9.9l5.6.1z"/>
+          <path d="M93.6 18.5c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v20.3c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V18.5z"/>
+          <path d="M102.7 18.5c0-.7.6-1.3 1.3-1.3h.4c.6 0 .9.3 1.3.7l13.7 17.5v-17c0-.7.5-1.3 1.3-1.3.7 0 1.2.6 1.2 1.3v20.3c0 .7-.5 1.2-1.2 1.2h-.1c-.5 0-.9-.3-1.3-.8l-14-17.9v17.5c0 .7-.5 1.3-1.3 1.3-.7 0-1.2-.6-1.2-1.3l-.1-20.2z"/>
+          <path d="M128.2 18.5c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v12.3l12.8-13.2c.3-.3.6-.5 1-.5.7 0 1.2.6 1.2 1.3 0 .4-.2.6-.4.9l-8 7.9 8.6 10.6c.2.3.4.5.4.9 0 .7-.6 1.3-1.3 1.3-.5 0-.8-.3-1-.6L135.6 29l-4.9 4.9v4.9c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3l.1-20.3z"/>
+          <path d="M43.1 19.3h.7c-.4-.7-1.2-1.2-2.1-1.2-.9 0-1.6-.6-1.9-1.4-.7.2-1.4.5-2.1.8h.2c1.1 0 2 .9 2 2v.3c1-.3 2.1-.5 3.2-.5z"/>
+          <path d="M60.5 28L55.3 6.6C54.9 4.3 52.7 0 46.7 0c-.8 0-1.5.7-1.5 1.5S45.9 3 46.7 3c4.9 0 5.6 3.7 5.6 4.1l4.8 19.7H55c-.4-3.6-2.5-6.6-5.3-8.5-.9.4-1.5 1.3-1.5 2.3v.3c2 1.4 3.4 3.5 3.8 6 .1.5.1 1 .1 1.5s-.1 1-.1 1.5c-.7 4.3-4.4 7.5-8.9 7.5s-8.2-3.3-8.9-7.5c-.1-.5-.1-1-.1-1.5s.1-1 .1-1.5c.1-.9.4-1.7.8-2.5-1-.1-1.9-.9-1.9-2 0-.2-.1-.4-.2-.5-.9 1.5-1.6 3.1-1.8 5h-1.8c-.7-5.9-5.8-10.5-11.9-10.5S6.2 20.9 5.5 26.8H3.4L8.2 7.1C8.3 6.7 9 3 13.8 3c.8 0 1.5-.7 1.5-1.5S14.7 0 13.8 0c-6 0-8.2 4.3-8.6 6.7L0 28.1c-.3 1.1.5 1.8 1.4 1.8h4c.1.6.2 1.2.4 1.8.1-.1.2-.2.2-.4 0-1.1.9-2 2-2 .2 0 .3 0 .5.1 0-.3-.1-.7-.1-1 0-.5.1-1 .1-1.5.7-4.3 4.4-7.5 8.9-7.5s8.2 3.3 8.9 7.5c.1.5.1 1 .1 1.5s-.1 1-.1 1.5c-.7 4.3-4.4 7.5-8.9 7.5-2 0-3.9-.7-5.4-1.8-.4.3-.8.5-1.3.5-.4 0-.7.3-.7.7 0 .3-.1.6-.2.8 2.1 1.7 4.7 2.7 7.6 2.7 6.1 0 11.2-4.6 11.9-10.5h1.8c.7 5.9 5.8 10.5 11.9 10.5s11.3-4.5 12-10.5h4c.9 0 1.7-.7 1.5-1.8z"/>
+        </g>
+        <g id="logo-pink-lg-top-2">
+          <path d="M10.7 34.1c-1.5 0-2.7-1.2-2.7-2.8 0 1.5-1.2 2.8-2.7 2.8 1.5 0 2.7 1.2 2.7 2.7 0-1.5 1.2-2.7 2.7-2.7z"/>
+          <path d="M37.9 19.6c-1.5 0-2.7-1.2-2.7-2.7 0 1.5-1.2 2.7-2.7 2.7 1.5 0 2.7 1.2 2.7 2.7 0-1.4 1.2-2.7 2.7-2.7z"/>
+          <path d="M50.7 16.1c-2.5 0-4.5-2-4.5-4.5 0 2.5-2 4.5-4.5 4.5 2.5 0 4.5 2 4.5 4.5 0-2.5 2-4.5 4.5-4.5z"/>
+          <path d="M98.5 9.9c-2 0-3.6-1.6-3.6-3.6 0 2-1.6 3.6-3.6 3.6 2 0 3.6 1.6 3.6 3.6 0-2 1.6-3.6 3.6-3.6z"/>
+        </g>
+      </symbol>
+      <symbol id="logo-pink-md" viewBox="0 0 146.3 40.4">
+        <g id="logo-pink-md-1">
+          <path d="M71.9 18.7c0-.7.6-1.3 1.3-1.3h7.2c5.1 0 8.4 2.7 8.4 7.1v.1c0 4.9-4.1 7.4-8.9 7.4h-5.5v6.8c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3l.1-20.1zM80 29.6c3.7 0 6.2-2 6.2-5v-.1c0-3.2-2.4-4.9-6.1-4.9h-5.7v9.9l5.6.1z"/>
+          <path d="M93.6 18.5c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v20.3c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V18.5z"/>
+          <path d="M102.7 18.5c0-.7.6-1.3 1.3-1.3h.4c.6 0 .9.3 1.3.7l13.7 17.5v-17c0-.7.5-1.3 1.3-1.3.7 0 1.2.6 1.2 1.3v20.3c0 .7-.5 1.2-1.2 1.2h-.1c-.5 0-.9-.3-1.3-.8l-14-17.9v17.5c0 .7-.5 1.3-1.3 1.3-.7 0-1.2-.6-1.2-1.3l-.1-20.2z"/>
+          <path d="M128.2 18.5c0-.7.6-1.3 1.3-1.3s1.3.6 1.3 1.3v12.3l12.8-13.2c.3-.3.6-.5 1-.5.7 0 1.2.6 1.2 1.3 0 .4-.2.6-.4.9l-8 7.9 8.6 10.6c.2.3.4.5.4.9 0 .7-.6 1.3-1.3 1.3-.5 0-.8-.3-1-.6L135.6 29l-4.9 4.9v4.9c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3l.1-20.3z"/>
+        </g>
+        <path id="logo-pink-md-2" d="M60.5 28L55.3 6.6C54.9 4.3 52.7 0 46.7 0c-.8 0-1.5.7-1.5 1.5S45.9 3 46.7 3c4.9 0 5.6 3.7 5.6 4.1l4.8 19.7H55c-.7-5.9-5.8-10.5-11.9-10.5s-11.2 4.6-11.9 10.5h-1.8c-.7-5.9-5.8-10.5-11.9-10.5s-11.3 4.6-12 10.5H3.4L8.2 7.1c0-.4.8-4.1 5.6-4.1.8 0 1.5-.7 1.5-1.5S14.7 0 13.8 0c-6 0-8.2 4.3-8.6 6.7L0 28.1c-.3 1.1.5 1.8 1.4 1.8h4c.7 5.9 5.8 10.5 11.9 10.5s11.2-4.6 11.9-10.5H31c.7 5.9 5.8 10.5 11.9 10.5S54.3 35.8 55 29.8h4c.9 0 1.7-.7 1.5-1.8zm-34.2 1.8c-.7 4.3-4.4 7.5-8.9 7.5S9.2 34 8.5 29.8c-.1-.5-.1-1-.1-1.5s.1-1 .1-1.5c.7-4.3 4.4-7.5 8.9-7.5s8.2 3.3 8.9 7.5c.1.5.1 1 .1 1.5s0 1.1-.1 1.5zm25.7 0c-.7 4.3-4.4 7.5-8.9 7.5s-8.2-3.3-8.9-7.5c-.1-.5-.1-1-.1-1.5s.1-1 .1-1.5c.7-4.3 4.4-7.5 8.9-7.5s8.2 3.3 8.9 7.5c.1.5.1 1 .1 1.5s0 1.1-.1 1.5z"/>
+      </symbol>
+      <symbol id="logo-pink-sm" viewBox="0 0 74.4 22.9">
+        <path d="M0 1.4C0 .7.6.1 1.3.1h7.2c5.1 0 8.4 2.7 8.4 7.1v.1c0 4.9-4.1 7.4-8.9 7.4H2.5v6.8c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V1.4zm8.1 11c3.7 0 6.2-2 6.2-5 0-3.2-2.4-4.9-6.1-4.9H2.5v9.9h5.6z"/>
+        <path d="M21.7 1.3c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v20.3c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V1.3z"/>
+        <path d="M30.9 1.3c0-.7.6-1.3 1.3-1.3h.4c.6 0 .9.3 1.3.7l13.7 17.5v-17C47.5.6 48 0 48.7 0c.7 0 1.2.6 1.2 1.3v20.3c0 .7-.5 1.2-1.2 1.2h-.1c-.5 0-.9-.3-1.3-.8l-14-17.9v17.5c0 .7-.5 1.3-1.3 1.3-.7 0-1.2-.6-1.2-1.3.1 0 .1-20.3.1-20.3z"/>
+        <path d="M56.3 1.3c0-.7.6-1.3 1.3-1.3.7 0 1.3.6 1.3 1.3v12.3L71.7.5c.3-.3.6-.5 1-.5.7 0 1.2.6 1.2 1.3 0 .4-.2.6-.4.9l-8 7.9 8.6 10.6c.2.3.4.5.4.9 0 .7-.6 1.3-1.3 1.3-.5 0-.8-.3-1-.6l-8.4-10.5-4.9 4.9v4.9c0 .7-.6 1.3-1.3 1.3-.7 0-1.3-.6-1.3-1.3V1.3z"/>
+      </symbol>
+    </svg>
+
+    <header class="page-header  page-header--opened">
+      <div class="page-header__nav-decor">
+        <div class="page-header__nav-wrapper">
+          <div class="page-header__extra-nav">
+            <a class="page-header__logo-link">
+              <span class="page-header__logo-title  visually-hidden">Логотип PINK</span>
+              <svg class="page-header__logo-icon-small" width="74.4" height="22.9">
+                <use class="page-header__logo-core" xlink:href="#logo-pink-sm"></use>
+              </svg>
+              <svg class="page-header__logo-icon-medium" width="146.3" height="40.4">
+                <use class="page-header__logo-core" xlink:href="#logo-pink-md-1"></use>
+                <use class="page-header__logo-core" xlink:href="#logo-pink-md-2"></use>
+              </svg>
+              <svg class="page-header__logo-icon-large" width="146.3" height="40.4">
+                <use class="page-header__logo-core" xlink:href="#logo-pink-lg-top-1"></use>
+                <use class="page-header__logo-core  page-header__logo-core--pink" xlink:href="#logo-pink-lg-top-2"></use>
+              </svg>
+            </a>
+            <button class="page-header__toggler  page-header__toggler--opened" type="button">
+              <span class="visually-hidden">Главное меню</span>
+              <svg class="page-header__toggler-icon-burger" width="49.945" height="24.007">
+                <use class="page-header__toggler-icon-core" xlink:href="#icon-menu-burger"></use>
+              </svg>
+              <svg class="page-header__toggler-icon-cross" width="23.867" height="23.867">
+                <use class="page-header__toggler-icon-core" xlink:href="#icon-menu-cross"></use>
+              </svg>
+            </button>
+          </div>
+
+          <nav class="page-header__main-nav  main-nav">
+            <p class="visually-hidden">Список страниц сайта:</p>
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item">
+                <a class="main-nav__item-link  main-nav__item-link--active">Главная</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a class="main-nav__item-link" href="gallery.html">Фотографии</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a class="main-nav__item-link" href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <h1 class="visually-hidden">PINK — превосходный мобильный фоторедактор и социальная сеть!</h1>
+      <div class="page-header__intro  intro  intro--index-decor">
+        <div class="intro__wrapper">
+          <h2 class="intro__title  intro__title--index-decor">Взгляните на жизнь иначе!</h2>
+          <p class="visually-hidden">Присоединяйтесь к нам с любой мобильной платформы!</p>
+          <section class="intro__download  download">
+            <a class="download__button  button  button--round-white" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8" target="_blank" rel="noopener">
+              Скачать приложение
+            </a>
+            <ul class="download__list">
+              <li class="download__list-item  download__list-item--apple">
+                <a class="download__item-link  download__item-link--apple" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8" target="_blank" rel="noopener">
+                  <span class="visually-hidden">Скачать из App Store</span>
+                </a>
+              </li>
+              <li class="download__list-item  download__list-item--google">
+                <a class="download__item-link  download__item-link--google" href="https://play.google.com/store/apps?hl=ru" target="_blank" rel="noopener">
+                  <span class="visually-hidden">Скачать из Google Play</span>
+                </a>
+              </li>
+              <li class="download__list-item  download__list-item--windows">
+                <a class="download__item-link  download__item-link--windows" href="https://www.microsoft.com/ru-ru/store/apps" target="_blank" rel="noopener">
+                  <span class="visually-hidden">Скачать из Windows Store</span>
+                </a>
+              </li>
+            </ul>
+            <p class="download__info">
+              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8.
+            </p>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="lead">
+        <p class="lead__text  lead__text--index-top">
+          <span class="lead__text-item">Устали от серости мегаполиса?</span>
+          <span class="lead__text-item">Нам есть, что вам<br>предложить!</span>
+        </p>
+      </section>
+
+      <section class="features">
+        <h2 class="visually-hidden">Особенности PINK</h2>
+        <ul class="features__list">
+          <li class="features__list-item">
+            <h3 class="features__item-title  features__item-title--mood">Поднимает настроение</h3>
+            <p class="features__item-description">
+              Приложение позволит вам победить осеннюю хандру
+              и депрессию буквально в несколько кликов!
+            </p>
+          </li>
+          <li class="features__list-item">
+            <h3 class="features__item-title  features__item-title--decoration">Меняет мир вокруг</h3>
+            <p class="features__item-description">
+              Сделайте снимок и украсьте его смайликом
+              или текстовой подписью, чтобы усилить&nbsp;эффект
+            </p>
+          </li>
+          <li class="features__list-item">
+            <h3 class="features__item-title  features__item-title--friends">Заводит новых друзей</h3>
+            <p class="features__item-description">
+              Ставьте лайки, комментируйте, делитесь
+              фотографиями с друзьями и заводите новых
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="research">
+        <div class="research__container">
+          <h2 class="research__title">Эффект на&nbsp;24&nbsp;часа!</h2>
+          <p class="research__description">
+            Британские ученые провели исследования и&nbsp;доказали,
+            что&nbsp;положительный эффект от&nbsp;использования приложения
+            длится целые&nbsp;сутки!
+          </p>
+          <a class="research__link" href="#">Узнать больше об исследовании</a>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы пользователей</h2>
+        <div class="reviews__container  reviews__container--1  reviews__container--active">
+          <blockquote class="reviews__item">
+            <p class="reviews__author-container">
+              <cite class="reviews__author-name">Николай Петров</cite>
+              <span class="reviews__author-extra">25 лет, водитель трамвая</span>
+            </p>
+            <p class="reviews__quote">
+              <span class="reviews__hooks  reviews__hooks--open">«</span>
+              Это приложение перевернуло мой мир и позволило по-новому взглянуть
+              на привычные серые вещи! А еще я познакомился со своей
+              будущей женой в комментариях к выложенной фотографии!
+              <span class="reviews__hooks  reviews__hooks--close">»</span>
+            </p>
+          </blockquote>
+        </div>
+        <div class="reviews__container  reviews__container--2">
+          <blockquote class="reviews__item">
+            <p class="reviews__author-container">
+              <cite class="reviews__author-name">Кирилл Валиев</cite>
+              <span class="reviews__author-extra">39 лет, бизнесмен</span>
+            </p>
+            <p class="reviews__quote">
+              <span class="reviews__hooks  reviews__hooks--open">«</span>
+              Отличная программа! Позволяет всегда быть в курсе самого
+              интересного, что происходит не только в моем городе и моей
+              стране, но и во всем мире. И это прекрасно — я в центре событий!
+              <span class="reviews__hooks  reviews__hooks--close">»</span>
+            </p>
+          </blockquote>
+        </div>
+        <div class="reviews__container  reviews__container--3">
+          <blockquote class="reviews__item">
+            <p class="reviews__author-container">
+              <cite class="reviews__author-name">Виктор Островский</cite>
+              <span class="reviews__author-extra">30 лет, фотограф</span>
+            </p>
+            <p class="reviews__quote">
+              <span class="reviews__hooks  reviews__hooks--open">«</span>
+              PINK мотивирует на путешествия. Вам просто становится тесно
+              в одном городе, и вот вы уже отправляетесь искать нечто большее
+              за его пределами. Пишу из Египта, заходите смотреть фото!
+              <span class="reviews__hooks  reviews__hooks--close">»</span>
+            </p>
+          </blockquote>
+        </div>
+        <div class="reviews__controls">
+          <div class="reviews__toggler-container">
+            <label class="reviews__toggler  reviews__toggler--1  reviews__toggler--active" tabindex="0">
+              <input class="visually-hidden" type="radio" name="reviews-toggler" tabindex="-1" checked>
+              <span class="visually-hidden">Первый отзыв</span>
+            </label>
+            <label class="reviews__toggler  reviews__toggler--2" tabindex="0">
+              <input class="visually-hidden" type="radio" name="reviews-toggler" tabindex="-1">
+              <span class="visually-hidden">Второй отзыв</span>
+            </label>
+            <label class="reviews__toggler  reviews__toggler--3" tabindex="0">
+              <input class="visually-hidden" type="radio" name="reviews-toggler" tabindex="-1">
+              <span class="visually-hidden">Третий отзыв</span>
+            </label>
+          </div>
+          <div class="reviews__arrow-container">
+            <button class="reviews__arrow  reviews__arrow--prev" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <button class="reviews__arrow  reviews__arrow--next" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="price">
+        <h2 class="visually-hidden">Тарифные планы PINK</h2>
+        <table class="price__table">
+          <thead class="price__table-head">
+            <tr class="price__head-row">
+              <th class="visually-hidden">
+                <p class="visually-hidden">Опции</p>
+              </th>
+              <th class="price__head-cell">
+                <p class="price__item-title">База</p>
+                <p class="price__item-cost">
+                  <span class="visually-hidden">Стоимость:</span>
+                  1,99 USD
+                </p>
+              </th>
+              <th class="price__head-cell  price__head-cell--hit">
+                <p class="price__item-title">Стандарт</p>
+                <p class="price__item-cost">
+                  <span class="visually-hidden">Стоимость:</span>
+                  3,99 USD
+                </p>
+              </th>
+              <th class="price__head-cell">
+                <p class="price__item-title">Анлим</p>
+                <p class="price__item-cost">
+                  <span class="visually-hidden">Стоимость:</span>
+                  9,99 USD
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="price__table-body">
+            <tr class="price__option-row">
+              <td class="price__option-name  price__option-name--switchable">
+                <p class="price__option-title">Розовый фильтр</p>
+              </td>
+              <td class="price__option-value  price__option-value--no-bordertop">
+                <span class="price__option-placeholder  price__option-placeholder--filter  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__option-value  price__option-value--no-bordertop">
+                <span class="price__option-placeholder  price__option-placeholder--filter  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__option-value  price__option-value--no-bordertop">
+                <span class="price__option-placeholder  price__option-placeholder--filter  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+            <tr class="price__option-row">
+              <td class="price__option-name  price__option-name--switchable">
+                <p class="price__option-title">Смайлики</p>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--smiles  price__option-placeholder--no"></span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--smiles  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--smiles  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+            <tr class="price__option-row">
+              <td class="price__option-name  price__option-name--switchable">
+                <p class="price__option-title">Комментарии</p>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--comments  price__option-placeholder--no"></span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--comments  price__option-placeholder--no"></span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="price__option-value">
+                <span class="price__option-placeholder  price__option-placeholder--comments  price__option-placeholder--yes"></span>
+                <span class="visually-hidden">Есть</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="price__controls">
+          <label class="price__toggler  price__toggler--base" tabindex="0">
+            <input class="visually-hidden" type="radio" name="price-toggler" tabindex="-1">
+            <span class="visually-hidden">Тариф База</span>
+          </label>
+          <label class="price__toggler  price__toggler--standart  price__toggler--active" tabindex="0">
+            <input class="visually-hidden" type="radio" name="price-toggler" tabindex="-1" checked>
+            <span class="visually-hidden">Тариф Стандарт</span>
+          </label>
+          <label class="price__toggler  price__toggler--unlim" tabindex="0">
+            <input class="visually-hidden" type="radio" name="price-toggler" tabindex="-1">
+            <span class="visually-hidden">Тариф Анлим</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2 class="contact__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
+        <div class="contact__info-container  contact__info-container--tel">
+          <h3 class="contact__info-title  contact__info-title--tel">Звоните:</h3>
+          <a class="contact__info-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </div>
+        <div class="contact__info-container  contact__info-container--email">
+          <h3 class="contact__info-title  contact__info-title--email">Пишите:</h3>
+          <a class="contact__info-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+        <div class="contact__info-container  contact__info-container--address">
+          <h3 class="contact__info-title  contact__info-title--address">Приезжайте в гости:</h3>
+          <span class="contact__info-address">ул. Большая Конюшенная,&nbsp;19/8</span>
+        </div>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Офис PINK на карте</h2>
+        <div class="map__container"></div>
+      </section>
+    </main>
+
+    <footer class="page-footer  page-footer--switchable">
+      <a class="page-footer__logo-link" href="index.html">
+        <span class="visually-hidden">На главную страницу</span>
+        <svg class="page-footer__logo-icon-medium" width="146.3" height="40.4">
+          <use class="page-footer__logo-icon-core" xlink:href="#logo-pink-md-1"></use>
+          <use class="page-footer__logo-icon-core  page-footer__logo-icon-core--pink" xlink:href="#logo-pink-md-2"></use>
+        </svg>
+        <svg class="page-footer__logo-icon-large" width="146.3" height="40.4">
+          <use class="page-footer__logo-icon-core" xlink:href="#logo-pink-lg-bottom-1"></use>
+          <use class="page-footer__logo-icon-core  page-footer__logo-icon-core--pink" xlink:href="#logo-pink-lg-bottom-2"></use>
+        </svg>
+      </a>
+      <section class="page-footer__social  social">
+        <h2 class="visually-hidden">Следите за новостями PINK в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__list-item">
+            <a class="social__item-link  social__item-link--twitter" href="#" target="_blank" rel="noopener">
+              <span class="visually-hidden">Наш Twitter</span>
+            </a>
+          </li>
+          <li class="social__list-item">
+            <a class="social__item-link  social__item-link--facebook" href="#" target="_blank" rel="noopener">
+              <span class="visually-hidden">Наш Facebook</span>
+            </a>
+          </li>
+          <li class="social__list-item">
+            <a class="social__item-link  social__item-link--youtube" href="#" target="_blank" rel="noopener">
+              <span class="visually-hidden">Наш канал на Youtube</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-footer__copyright">
+        <p class="page-footer__copyright-item">
+          <span class="page-footer__copyright-text">Разработано</span>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg class="page-footer__copyright-icon" width="26.943" height="34.09">
+              <use class="page-footer__copyright-icon-core" xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </p>
+      </section>
+    </footer>
+    <script src="js/script.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ3hdcToSmjfQLUYXWYbCfulstdLExJZY&callback=initMap"></script>
+    <script src="js/picturefill.min.js" async></script>
+  </body>
+</html>

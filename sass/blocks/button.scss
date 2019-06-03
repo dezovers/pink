@@ -1,0 +1,108 @@
+.button {
+  box-sizing: border-box;
+  font-family: "Open Sans", "Verdana", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: #d22856;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &--round-white {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+      color: #d22856;
+    }
+
+    &:active {
+      background-color: #ffffff;
+      color: rgba(#d22856, 0.3);
+    }
+  }
+
+  &--round-pink {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    color: #d22856;
+    border: 3px solid #d22856;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+      background-color: #d22856;
+      color: #ffffff;
+    }
+
+    &:active {
+      background-color: #d22856;
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+
+  &--round-gray {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+    color: rgba(#283645, 0.1);
+    border: 3px solid rgba(#283645, 0.1);
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+      color: rgba(#283645, 0.3);
+      border: 3px solid rgba(#283645, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(#283645, 0.3);
+      background-clip: padding-box;
+      color: rgba(#ffffff, 0.3);
+      border: 3px solid rgba(#283645, 0.3);
+    }
+  }
+
+  &--square-green {
+    padding-top: 23px;
+    padding-right: 20px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    color: #ffffff;
+    border: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: #2aab6d;
+
+    &:hover,
+    &:focus {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      background-color: #1c9b5e;
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+}

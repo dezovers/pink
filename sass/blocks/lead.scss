@@ -1,0 +1,134 @@
+.lead {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.lead__text {
+  margin: 0;
+  padding: 0;
+  padding-top: 46px;
+  padding-bottom: 42px;
+  font-size: 14px;
+  line-height: 2.142;
+  font-weight: 400;
+  text-align: center;
+  color: #283645;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  &--index-top {
+    padding-top: 41px;
+    padding-bottom: 31px;
+    font-size: 24px;
+    line-height: 1.233;
+    font-weight: 300;
+  }
+
+  &--gallery-top {
+    padding-bottom: 49px;
+  }
+
+  &--form-top {
+    padding-bottom: 35px;
+  }
+
+  &--gallery-inner {
+    margin-left: -5px;
+    padding-top: 42px;
+  }
+}
+
+.lead__text-switchable {
+  display: none;
+}
+
+.lead__text-item {
+  display: block;
+  margin-bottom: 29px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .lead__text {
+    padding-top: 93px;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 1.666;
+
+    &--index-top {
+      padding-top: 50px;
+      padding-right: 0;
+      padding-bottom: 31px;
+      padding-left: 0;
+      font-size: 40px;
+      line-height: 1.233;
+    }
+
+    &--gallery-top {
+      padding-bottom: 76px;
+    }
+
+    &--gallery-inner {
+      margin-left: -3px;
+      padding-top: 46px;
+      padding-bottom: 69px;
+    }
+  }
+
+  .lead__text-switchable {
+    display: inline;
+  }
+
+  .lead__text-item {
+    margin-bottom: -1px;
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .lead {
+    padding: 0;
+  }
+
+  .lead__text {
+    width: 770px;
+    margin: 0 auto;
+    padding-right: 95px;
+    padding-bottom: 45px;
+    padding-left: 95px;
+
+    &--index-top {
+      width: 940px;
+      padding-top: 65px;
+      padding-right: 10px;
+      padding-bottom: 73px;
+      padding-left: 10px;
+      font-size: 50px;
+      line-height: 1.233;
+    }
+
+    &--gallery-top {
+      padding-bottom: 89px;
+    }
+
+    &--gallery-inner {
+      margin: 0 auto;
+      padding-top: 5px;
+      padding-bottom: 66px;
+    }
+  }
+
+  .lead__text-switchable {
+    display: inline;
+  }
+
+  .lead__text-item {
+    margin-bottom: -1px;
+  }
+}

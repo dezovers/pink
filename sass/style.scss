@@ -1,0 +1,71 @@
+/* Подключение normalize.css */
+@import "normalize.scss";
+
+/* Подключение шрифтов */
+@import "fonts.scss";
+
+/* Подключение глобальных переменных */
+@import "variables.scss";
+
+/* Подключение глобальных свойств */
+@import "scaffolding.scss";
+
+/* Подключение глобальных стилей кнопок */
+@import "blocks/button.scss";
+
+/* Подключение блока PAGE-HEADER */
+@import "blocks/page-header.scss";
+
+/* Подключение блока MAIN-NAV */
+@import "blocks/main-nav.scss";
+
+/* Подключение блока INTRO */
+@import "blocks/intro.scss";
+
+/* Подключение блока DOWNLOAD */
+@import "blocks/download.scss";
+
+/* Подключение блока LEAD */
+@import "blocks/lead.scss";
+
+/* Подключение блока FEATURES */
+@import "blocks/features.scss";
+
+/* Подключение блока RESEARCH */
+@import "blocks/research.scss";
+
+/* Подключение блока REVIEWS */
+@import "blocks/reviews.scss";
+
+/* Подключение блока PRICE */
+@import "blocks/price.scss";
+
+/* Подключение блока CONTACT */
+@import "blocks/contact.scss";
+
+/* Подключение блока MAP */
+@import "blocks/map.scss";
+
+/* Подключение блока GALLERY */
+@import "blocks/gallery.scss";
+
+/* Подключение блока POST-TREND */
+@import "blocks/post-trend.scss";
+
+/* Подключение блока POST */
+@import "blocks/post.scss";
+
+/* Подключение блока EDITOR */
+@import "blocks/editor.scss";
+
+/* Подключение блока PAGE-FOOTER */
+@import "blocks/page-footer.scss";
+
+/* Подключение блока SOCIAL */
+@import "blocks/social.scss";
+
+/* Подключение блока FORM */
+@import "blocks/form.scss";
+
+/* Подключение блока MODAL */
+@import "blocks/modal.scss";

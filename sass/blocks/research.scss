@@ -1,0 +1,156 @@
+.research {
+  display: none;
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ПЛАНШЕТА------------------------*/
+@media #{$tablet} {
+  .research {
+    display: block;
+    padding-top: 58px;
+    padding-right: 20px;
+    padding-bottom: 39px;
+    padding-left: 20px;
+  }
+
+  .research__container {
+    width: 50%;
+    min-height: 248px;
+    margin-left: auto;
+    padding-top: 36px;
+    padding-bottom: 28px;
+    padding-left: 310px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 238px;
+      height: 276px;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      background-image: url("../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-size: 238px auto;
+    }
+
+    &::after {
+      content: "24";
+      position: absolute;
+      width: 176px;
+      height: 167px;
+      top: 55px;
+      left: 18px;
+      padding-top: 9px;
+      background-color: #ffffff;
+      border: 13px solid #d22856;
+      border-radius: 50%;
+      font-size: 96px;
+      line-height: 149px;
+      font-weight: 700;
+      color: #d22856;
+      text-align: center;
+    }
+  }
+
+  .research__title {
+    width: 290px;
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 12px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000000;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .research__description {
+    margin: 0;
+    margin-bottom: 13px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.714;
+    font-weight: 400;
+    color: #283645;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .research__link {
+    font-size: 14px;
+    line-height: 1.714;
+    font-weight: 400;
+    color: #d22856;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    &:hover,
+    &:focus {
+      color: #283645;
+    }
+
+    &:active {
+      color: rgba(#283645, 0.3);
+      text-decoration: none;
+    }
+  }
+}
+
+/*---------------------------БЛОК СВОЙСТВ ДЛЯ ДЕСКТОПА------------------------*/
+@media #{$desktop} {
+  .research {
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+
+  .research__container {
+    width: 574px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-bottom: 70px;
+    padding-left: 376px;
+
+    &::before {
+      width: 298px;
+      height: 345px;
+      top: 6px;
+      left: 11px;
+      background-image: url("../img/icon-timer.svg");
+      background-size: 298px auto;
+    }
+
+    &::after {
+      width: 221px;
+      height: 211px;
+      top: 76px;
+      left: 33px;
+      padding-top: 10px;
+      border: 16px solid #d22856;
+      font-size: 120px;
+      line-height: 187px;
+    }
+  }
+
+  .research__title {
+    width: auto;
+    margin: 0;
+    margin-bottom: 25px;
+    line-height: 1;
+  }
+
+  .research__description {
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.666;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 1.666;
+  }
+}
